@@ -6,7 +6,7 @@
 # 
 
 #rest=rfmriNasal
-#subjdir=/Users/gzc4893/Desktop/Tmp/TestGLM/subj002
+#subjdir=~/Desktop/Tmp/TestGLM/subj002
 #roidir=/Volumes/Untitled/RestOlfAnaly/SubjectData/ro_subj002/anat/FSMasks
 
 #featdir=${subjdir}/${rest}/${rest}+++.feat
