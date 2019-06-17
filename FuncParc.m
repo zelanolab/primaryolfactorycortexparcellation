@@ -7,10 +7,7 @@ function FuncParc( wkpath, subjs, savedir, param)
 % % savedir = '/Volumes/Untitled/RestOlfAnaly/Results/Test_Parc25Subjs_Olf_CZ';
 % % 
 % % % subjects
-% % subjs = {'ro_subj001', 'ro_subj002', 'ro_subj003', 'ro_subj004', 'ro_subj005', 'ro_subj006', 'ro_subj007',...
-% %     'ro_subj008', 'ro_subj009', 'ro_subj010', 'ro_subj011', 'ro_subj012', 'ro_subj013',...
-% %     'ro_subj015', 'ro_subj016', 'ro_subj017', 'ro_subj018', 'ro_subj019', 'ro_subj020', 'ro_subj021',...
-% %     'ro_subj022', 'ro_subj023', 'ro_subj024', 'ro_subj025', 'ro_subj026'};
+% % subjs = {'ro_subj001', 'ro_subj002'};
 % % 
 % % param = [];
 % % % relative full path to 4d fmri volume in each subject's folder
