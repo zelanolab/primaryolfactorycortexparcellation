@@ -1,8 +1,9 @@
 function [surf_file, cortex_file, cortex] = CreateSurf( vol, varargin)
-% Create surface mask and cortex rendering from SPM segmentation results
+% Create surface mask and cortex rendering
 % 
 % Input
-%   vol, full-path-to-original_MR e.g. wkpath/MR.nii or wkpath/MR.nii.gz
+%   vol, full-path-to-original_MR e.g. wkpath/MR.nii 
+%        or wkpath/MR.nii.gz
 %        or 3d matrix
 % 
 %   Key-Value pairs
