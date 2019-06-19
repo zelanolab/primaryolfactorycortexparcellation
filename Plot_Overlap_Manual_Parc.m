@@ -15,6 +15,9 @@ ref_label = 'last';
 % 'normal' | 'reverse'
 ydir = 'normal';
 
+name_prefix = 'Figure2C';
+
+
 
 % Figure 3, K=3-6
 roi = '~/Documents/RestfMRI/SourceData/Figure_3_source_data/Figure_3_MNI152_ROI_ManualSegmentation_2mm_LRMerged.nii.gz';
@@ -27,6 +30,8 @@ ref_label = 'first';
 % 'normal' | 'reverse'
 ydir = 'reverse';
 
+name_prefix = 'Figure3';
+
 
 % Supplementary Figure 1B 
 roi = '~/Documents/RestfMRI/SourceData/Supplementary_Figure_1_sourcedata/Suppl_Figure1_Manual_Segmentation_v2_2mm.nii.gz';
@@ -37,6 +42,7 @@ hemi = 2:3;
 ref_label = 'first';
 % 'normal' | 'reverse'
 ydir = 'reverse';
+name_prefix = 'Figure2_figure_supplement1AB';
 
 
 % Supplementary Figure 1D 
@@ -49,7 +55,7 @@ hemi = 2:3;
 ref_label = 'last';
 % 'normal' | 'reverse'
 ydir = 'normal';
-
+name_prefix = 'Figure2_figure_supplement1CD';
 
 
 
