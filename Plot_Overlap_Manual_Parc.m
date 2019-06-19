@@ -210,9 +210,6 @@ colormap( r);
 
 permut_nb_overlaps = zeros( nb_roi_vals, nb_par_vals, 3, nbpermuts+1);
 zscore = nan( nb_roi_vals, nb_par_vals, 3);
-figure;
-SetPrintProp( gcf, 0.3, 0.1);
-SetPrintProp( gcf, 0.2, 0.4)
 for hemi_idx = hemi
     tmp_roi_vol = roi_vol.vol;
     tmp_par_vol = par_vol.vol;    
@@ -248,14 +245,6 @@ for hemi_idx = hemi
     avg = squeeze( avg);
     sd = squeeze( sd);
     zscore( :, :, hemi_idx) = ( permut_nb_overlaps( :, :, hemi_idx, 1) - avg) ./ sd;
-    
-    subplot( 1, 3, hemi_idx);
-    v = squeeze( permut_nb_overlaps( randperm( nb_roi_vals, 1), randperm( nb_par_vals, 1), hemi_idx, 2:end));
-    histfit( v, 20);
-    xlabel( 'Overlap percentage');
-    ylabel( 'Count');
-    title( [hemi_name{ hemi_idx}, ' example hist']);
-    set( gca, 'fontsize', 10);
 end
 
 
