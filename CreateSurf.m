@@ -159,9 +159,6 @@ usm_gm_file = fullfile( wkpath, gm_name);
 usm_wm_file = fullfile( wkpath, wm_name);
 
 if ~exist( usm_gm_file, 'file') || ~exist( usm_wm_file, 'file')    
-    usm_gm_file = fullfile( wkpath, 'SPMSegment', gm_name);
-    usm_wm_file = fullfile( wkpath, 'SPMSegment', wm_name);
-
     if ~exist( usm_gm_file, 'file') || ~exist( usm_wm_file, 'file')
         % error( 'No segmentation files for %s were found.', vol);
         % run the segmention on fly
