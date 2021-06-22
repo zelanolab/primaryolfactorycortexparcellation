@@ -326,7 +326,7 @@ elseif ~isempty( options.brainfile) && ~isempty( stats)
             [p, n, ext] = fileparts( statsfile);
             statsfile_new_resol = fullfile( p, [brain_resol, '_', n, ext]);
             cmd = ['source ${FSLDIR}/etc/fslconf/fsl.sh && export PATH=$PATH:${FSLDIR}/bin && flirt -in ', statsfile,...
-            ' -ref ', options.brainfile, ' -applyxfm -usesqform -out ', statsfile_new_resol, ' -omat ', [statsfile_new_resol, '.mat 1>/dev/null']];
+            ' -ref ', options.brainfile, ' -interp nearestneighbour ', ' -applyxfm -usesqform -out ', statsfile_new_resol, ' -omat ', [statsfile_new_resol, '.mat 1>/dev/null']];
             status = system( cmd);
 
             % re-load stats image
@@ -1031,7 +1031,7 @@ for k = 1 : 3
                     end
                 elseif k == 2
                     plot( options.rect( 1, [1 2 2 1 1]) + 0.5*[-1 1 1 -1 -1],...
-                        options.rect( 3, [1 1 2 2 1]) + 0.5*[-1 -1 -1 -1 1],...
+                        options.rect( 3, [1 1 2 2 1]) + 0.5*[-1 -1 1 1 -1],...
                         'linewidth', options.rect_linewidth, 'color',options.rect_color);
                      if strcmpi( options.rect_trim, 'yes')
                          set( gca,...
