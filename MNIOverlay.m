@@ -109,6 +109,8 @@ function [pre_pad, post_pad] = MNIOverlay( statsfile, coord2plot, varargin)
 % https://sites.northwestern.edu/zelano/
 % 
 
+warning( 'Use with caution');
+
 if nargin < 2
     error( 'Not enought input arguments.');
 end
@@ -648,6 +650,8 @@ if ~isempty( stats)
         end
         
     else
+        stats_val = unique( stats.vol(:));
+        stats_val = stats_val( stats_val ~= 0);
         for k = 1 : length( stats_val)
             ind = find( abs( pad_stats - stats_val(k)) < eps);
             mask_ind = cat( 1, mask_ind, ind);            
